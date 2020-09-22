@@ -49,10 +49,15 @@ const Post = ({ post }: Props) => {
 
       <Container>
         <Header />
-        <article>
+
+        <article className="mt-20">
+          <div className="text-sm text-brand-blue font-bold leading-none bg-gray-300 py-2 px-4 rounded-full inline-block">
+            Episode #{post.number}
+          </div>
+
           <h1 className="text-6xl md:text-7xl font-bold">{post.title}</h1>
 
-          <p className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
+          <p className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center mb-20">
             <span className="block">
               featuring {' '}
               <Guest
@@ -156,12 +161,14 @@ export async function getStaticProps({ params }: Params) {
     'date',
     'slug',
     'excerpt',
-    'presenter',
+    'guest',
     'guestLinkedIn',
     'venture',
     'content',
     'embed',
+    'number',
   ])
+
   const content = await markdownToHtml(post.content || '')
 
   return {

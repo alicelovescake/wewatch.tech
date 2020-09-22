@@ -22,6 +22,10 @@ function LatestPost({ post }: Props) {
 
         <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
           <a className="block bg-black rounded-b-lg text-white text-2xl p-10 hover:text-brand-blue hover:cursor-pointer">
+            <div className="text-xs bg-brand-blue font-bold leading-none mb-2 text-white py-2 px-4 rounded-full inline-block">
+              Episode #{post.number}
+            </div>
+
             <p className="text-5xl md:text-6xl font-bold">
               {post.title}
             </p>

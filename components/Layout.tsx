@@ -11,7 +11,7 @@ const Layout = ({ preview, children }: Props) => {
     <>
       <Meta />
 
-      <div>
+      <div className="mb-20">
         <main>{children}</main>
       </div>
 

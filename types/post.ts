@@ -1,4 +1,5 @@
 type Post = {
+  number: number
   slug: string
   title: string
   date: string

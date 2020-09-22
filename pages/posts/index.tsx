@@ -24,25 +24,29 @@ const Posts = ({ allPosts }: Props) => {
 
       <Container>
         <Header />
-        <div className="space-y-10">
+        <div className="space-y-20 my-20">
           {allPosts.map(post => (
-            <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
+            <Link href="/posts/[slug]" as={`/posts/${post.slug}`} key={post.slug}>
               <a className="post block w-full text-2xl hover:cursor-pointer">
-                <p className="text-4xl md:text-5xl md:text-6xl font-bold">
-                  {post.title}
-                </p>
+                <div className="text-sm text-brand-blue font-bold leading-none bg-gray-300 py-2 px-4 rounded-full inline-block">
+                  Episode #{post.number}
+                </div>
 
-                <p className="guest text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
+                <div className="text-4xl md:text-6xl font-bold">
+                  {post.title}
+                </div>
+
+                <div className="guest text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
                   <div>
                     featuring {post.guest} <span className="text-brand-blue">@</span> {post.venture}
                   </div>
 
                   <div className="text-base md:text-lg"><DateFormatter dateString={post.date} /></div>
-                </p>
+                </div>
 
-                <p className="hidden md:block text-xl mt-2 -my-10">
+                <div className="hidden md:block text-xl mt-2">
                   {post.excerpt}
-                </p>
+                </div>
               </a>
             </Link>
           ))}
@@ -67,6 +71,7 @@ export const getStaticProps = async () => {
     'excerpt',
     'guest',
     'venture',
+    'number',
   ])
 
   return {
