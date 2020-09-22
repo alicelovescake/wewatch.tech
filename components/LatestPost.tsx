@@ -37,9 +37,9 @@ function LatestPost({ post }: Props) {
         </Link>
       </div>
 
-      <div className="pt-10 sm:p-10 text-center sm:w-1/3 text-6xl font-bold">
+      <div className="pt-10 sm:p-10 sm:w-1/3 font-bold">
         <Link href="/posts">
-          <a className="link">
+          <a className="link text-6xl text-center">
             More Episodes
           </a>
         </Link>

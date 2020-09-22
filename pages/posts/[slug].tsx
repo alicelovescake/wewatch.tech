@@ -10,6 +10,7 @@ import Header from '../../components/Header'
 import Layout from '../../components/Layout'
 import DateFormatter from '../../components/DateFormatter'
 import Signup from '../../components/Signup'
+import ListenOn from '../../components/ListenOn'
 
 import markdownStyles from '../../components/markdown-styles.module.css'
 
@@ -57,7 +58,7 @@ const Post = ({ post }: Props) => {
 
           <h1 className="text-6xl md:text-7xl font-bold">{post.title}</h1>
 
-          <p className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center mb-20">
+          <p className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
             <span className="block">
               featuring {' '}
               <Guest
@@ -72,14 +73,18 @@ const Post = ({ post }: Props) => {
             </span>
           </p>
 
-          <div className="video-container my-10 rounded-lg border-2 p-2 border-brand-blue">
+          <div className="video-container my-10 rounded-t-lg border-2 p-2 border-brand-blue">
             <iframe
               src={post.embed}
               frameBorder="0"
               width="400px"
               height="102px"
               scrolling="no"
-            ></iframe>
+            ></iframe> 
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <ListenOn />
           </div>
 
           <div className="max-w-3xl mx-auto">
