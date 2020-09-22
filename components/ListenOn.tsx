@@ -1,5 +1,5 @@
 import { FaSpotify } from 'react-icons/fa'
-import { SiPocketcasts, SiAnchor } from 'react-icons/si'
+import { SiPocketcasts, SiAnchor, SiApplepodcasts} from 'react-icons/si'
 
 type Props = {
   Icon: any,
@@ -25,6 +25,7 @@ function ListenOn() {
         <ListenOnLink Icon={FaSpotify} place="Spotify" url="https://open.spotify.com/show/1EofHBCAjBrn9BMykQklPM" />
         <ListenOnLink Icon={SiPocketcasts} place="Pocket Casts" url="https://pca.st/ex6fxdsk" />
         <ListenOnLink Icon={SiAnchor} place="Anchor" url="https://anchor.fm/weubc" />
+        <ListenOnLink Icon={SiApplepodcasts} place="Apple" url="https://podcasts.apple.com/ca/podcast/we-ubc/id1531947035" />
       </div>
     </div>
   )
