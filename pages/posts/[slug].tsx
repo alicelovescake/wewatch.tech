@@ -119,7 +119,7 @@ const Post = ({ post }: Props) => {
               href="https://www.start.entrepreneurship.ubc.ca/"
               className="border-b-4 border-white"
             >
-              entrepreneurship@UBC
+              e@UBC
             </a>
             {' '} program. 
           
